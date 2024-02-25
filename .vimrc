@@ -55,23 +55,10 @@ execute 'highlight StslineBackColorFGSecColorBG guifg=' . g:StslineBackColor ' g
 execute 'highlight StslineSecColorFGBackColorBG guifg=' . g:StslineSecColor ' guibg=' . g:StslineBackColor
 execute 'highlight StslineModColorFG guifg=' . g:StslineColorYellow ' guibg=' . g:StslineBackColor
 
-" Define active statusline
-function! ActivateStatusline()
+" Create statusline
 setlocal statusline=%#StslinePriColorBG#\ %{StslineMode()}%#StslineSecColorBG#\ \%{&readonly?\"\ \":\"\"}%F\ %#StslineModColorFG#%{&modified?\"\ \":\"\"}%=%#StslinePriColorFG#\ %{&filetype}\ %#StslineSecColorFG#%#StslineSecColorBG#%{&fenc!='utf-8'?\"\ \":''}%{&fenc!='utf-8'?&fenc:''}%{&fenc!='utf-8'?\"\ \":''}%#StslinePriColorFGSecColorBG#%#StslinePriColorBG#\ %p\%%\ %#StslinePriColorBGBold#%l%#StslinePriColorBG#/%L\ :%c\ 
-endfunction
 
-" Define Inactive statusline
-function! DeactivateStatusline()
-
-setlocal statusline=%#StslineSecColorBG#\ INACTIVE\ %#StslineSecColorBG#\ \%{&readonly?\"\ \":\"\"}%F\ %#StslineModColorFG#%{&modified?\"\ \":\"\"}%=%#StslineBackColorBG#\ %{&filetype}\ %#StslineSecColorFGBackColorBG#%#StslineSecColorBG#\ %p\%%\ %l/%L\ :%c\ 
-
-else
-setlocal statusline=%#StslineSecColorBG#\ \%{&readonly?\"\ \":\"\"}%F\ %#StslineModColorFG#%{&modified?\"\ \":\"\"}%=%#StslineBackColorBG#\ %{&filetype}\ %#StslineSecColorFGBackColorBG#%#StslineSecColorBG#\ %p\%%\ %l/%L\ :%c\ 
-endif
-
-endfunction
-
-" Get Statusline mode & also set primary color for that mode
+" Get statusline mode and also set primary color for that mode
 function! StslineMode()
 
     let l:CurrentMode=mode()
@@ -119,7 +106,6 @@ function! StslineMode()
 
     endif
 
-
     call UpdateStslineColors()
 
     return b:CurrentMode
@@ -136,10 +122,3 @@ execute 'highlight StslinePriColorFGSecColorBG guifg=' . g:StslinePriColor   ' g
 execute 'highlight StslineSecColorFGPriColorBG guifg=' . g:StslineSecColor   ' guibg=' . g:StslinePriColor
 
 endfunction
-
-" Set active / inactive statusline after entering, leaving buffer
-augroup SetStslineline
-    autocmd!
-    autocmd BufEnter,WinEnter * call ActivateStatusline()
-    autocmd BufLeave,WinLeave * call DeactivateStatusline()
-augroup END
