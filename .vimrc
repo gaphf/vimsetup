@@ -1,10 +1,10 @@
-" ==================================
-" ===         General            ===
-" ==================================
+" ==============================================
+" ===                General                 ===
+" ==============================================
 
-"set guifont=Menlo\ Regular:h15		" set font to Menlo size 15
-set noshowmode				        " Hide status
-set number				            " show line numbers
+"set guifont=Menlo\ Regular:h15     " set font to Menlo size 15
+set noshowmode                      " Hide status
+set number                          " show line numbers
 set splitbelow                      " open split plane below the editor
 set splitright                      " open split plane right to the editor
 set mouse=a                         " mouse setting on
@@ -14,7 +14,7 @@ set tabstop=2                       " set tab width to 2 columns.
 syntax enable                       " Syntax enable  
 set nocompatible                    " Disable Vi defaults.
 set autoindent                      " Autoindent when starting new line, or using `o` or `O`.
-"set backspace=indent,eol,start		" Allow backspace in insert mode.
+"set backspace=indent,eol,start     " Allow backspace in insert mode.
 set ruler                           " Show the line and column number of the cursor position.
 set incsearch                       " Enable highlighted case-insensitive incremential search.
 set ignorecase                      " Ignore capital letters during search.
@@ -26,17 +26,18 @@ set visualbell                      " Disable any annoying beeps on errors.
 set termguicolors                   " Improve displayed color
 set title                           " Set window title by default.
 
-" ==================================
-" ===       Colorscheme          ===
-" ==================================
+" ==============================================
+" ===              Colorscheme               ===
+" ==============================================
 
  let g:sonokai_style = 'shusia'
  let g:sonokai_better_performance = 1
  colorscheme sonokai
 
-" ==================================
-" ===        Statusline          ===
-" ==================================
+" ==============================================
+" ===              Statusline                ===
+" == thanks to: https://pastebin.com/qWRQVzES ==
+" ==============================================
 
 " Define color variables
 let g:StslineColorGreen  = "#2BBB4F"
