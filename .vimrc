@@ -2,23 +2,34 @@
 " ===         General            ===
 " ==================================
 
-set guifont=Menlo\ Regular:h15
-set number
-set splitbelow
-set mouse=a
-syntax enable
-set laststatus=2
-set noshowmode
+"set guifont=Menlo\ Regular:h15		" set font to Menlo size 15
+set noshowmode				        " Hide status
+set number				            " show line numbers
+set splitbelow                      " open split plane below the editor
+set splitright                      " open split plane right to the editor
+set mouse=a                         " mouse setting on
+set clipboard=autoselect            " vim clipboard to os clipboard
+set laststatus=2                    " always show statusbar.	
+set tabstop=2                       " set tab width to 2 columns.
+syntax enable                       " Syntax enable  
+set nocompatible                    " Disable Vi defaults.
+set autoindent                      " Autoindent when starting new line, or using `o` or `O`.
+"set backspace=indent,eol,start		" Allow backspace in insert mode.
+set ruler                           " Show the line and column number of the cursor position.
+set incsearch                       " Enable highlighted case-insensitive incremential search.
+set ignorecase                      " Ignore capital letters during search.
+set hlsearch                        " Enable search highlighting.
+set wildmenu                        " Autocomplete commands using nice menu in place of window status. Enable `Ctrl-N` and `Ctrl-P` to scroll through matches.
+set wildmode=longest,full           " For autocompletion, complete as much as you can.
+set noerrorbells                    " Disable any annoying beeps on errors.
+set visualbell                      " Disable any annoying beeps on errors.
+set termguicolors                   " Improve displayed color
+set title                           " Set window title by default.
 
 " ==================================
 " ===       Colorscheme          ===
 " ==================================
 
- " Important!!
- if has('termguicolors')
-   set termguicolors
- endif
- " The configuration options should be placed before `colorscheme sonokai`.
  let g:sonokai_style = 'shusia'
  let g:sonokai_better_performance = 1
  colorscheme sonokai
