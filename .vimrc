@@ -2,8 +2,8 @@
 " ===                General                 ===
 " ==============================================
 
-" set guifont=Menlo\ Regular:h15     " Set font to Menlo size 15.
-" set backspace=indent,eol,start     " Allow backspace in insert mode.
+" set guifont=Menlo\ Regular:h15    " Set font to Menlo size 15.
+" set backspace=indent,eol,start    " Allow backspace in insert mode.
 set noshowmode                      " Hide status.
 set number                          " Show line numbers.
 set splitbelow                      " Open split plane below the editor.
