@@ -2,8 +2,8 @@
 " ===                General                 ===
 " ==============================================
 
-"set guifont=Menlo\ Regular:h15     " Set font to Menlo size 15.
-"set backspace=indent,eol,start     " Allow backspace in insert mode.
+" set guifont=Menlo\ Regular:h15     " Set font to Menlo size 15.
+" set backspace=indent,eol,start     " Allow backspace in insert mode.
 set noshowmode                      " Hide status.
 set number                          " Show line numbers.
 set splitbelow                      " Open split plane below the editor.
@@ -31,7 +31,7 @@ set noshowmode                      " Hide status again.
 " ==============================================
 
 let g:sonokai_style = 'shusia'
-let g:sonokai_better_performance = 1
+" let g:sonokai_better_performance = 1
 colorscheme sonokai
 
 " ==============================================
