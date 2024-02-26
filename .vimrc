@@ -30,9 +30,9 @@ set noshowmode                      " Hide status again.
 " ===              Colorscheme               ===
 " ==============================================
 
- let g:sonokai_style = 'shusia'
- let g:sonokai_better_performance = 1
- colorscheme sonokai
+let g:sonokai_style = 'shusia'
+let g:sonokai_better_performance = 1
+colorscheme sonokai
 
 " ==============================================
 " ===              Statusline                ===
