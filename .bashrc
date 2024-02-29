@@ -24,6 +24,9 @@ export LS_COLORS='no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Run last command as sudo
 alias redo='sudo $(history -p !!)'
 
+# Set tab auto-completion case-insensitive
+bind 'set completion-ignore-case on'
+
 # ==  Functions  ==
 
 # Extracts any archive(s) (if unp isn't installed)
@@ -97,3 +100,4 @@ mkdirgo ()
 	mkdir -p $1
 	cd $1
 }
+
