@@ -1,7 +1,9 @@
 
 # =========================
-# ==  IMPORTED SETTINGS  ==
+# ==  Imported settings  ==
 # =========================
+
+# ==  General  ==
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -22,7 +24,7 @@ export LS_COLORS='no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Run last command as sudo
 alias redo='sudo $(history -p !!)'
 
-# ==  FUNCTIONS  ==
+# ==  Functions  ==
 
 # Extracts any archive(s) (if unp isn't installed)
 extract () {
