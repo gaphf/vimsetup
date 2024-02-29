@@ -1,6 +1,6 @@
-" ==============================================
-" ===                General                 ===
-" ==============================================
+" ==============
+" ==  General ==
+" ==============
 
 " set guifont=Menlo\ Regular:h15      " Set font to Menlo size 15.
 " set backspace=indent,eol,start      " Allow backspace in insert mode.
@@ -26,24 +26,28 @@ set termguicolors                   " Improve displayed color.
 set title                           " Set window title by default.
 set noshowmode                      " Hide status again.
 
+" ================
+" ==  Function  ==
+" ================
+
 " Jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
 
-" ==============================================
-" ===              Colorscheme               ===
-" ==============================================
+" ================================================
+" ==  Colorscheme with basic syntax  highlight  ==
+" ================================================
 
 let g:sonokai_style = 'shusia'
 " let g:sonokai_better_performance = 1
 colorscheme sonokai
 
-" ==============================================
-" ===              Statusline                ===
-" == Thanks to: https://pastebin.com/qWRQVzES ==
-" ==============================================
+" ================================================
+" ===                Statusline                ===
+" ==  Thanks to: https://pastebin.com/qWRQVzES  ==
+" ================================================
 
 " Define color variables
 let g:StslineColorGreen  = "#2BBB4F"
