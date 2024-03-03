@@ -1,5 +1,5 @@
 curl -fLo ~/.vimrc \
-https://raw.githubusercontent.com/gaphf/vimsetup/main/.vimrc
+https://raw.githubusercontent.com/sikkancs/vimsetup/main/.vimrc
 
 curl -fLo ~/.vim/autoload/sonokai.vim --create-dirs \
 https://raw.githubusercontent.com/sainnhe/sonokai/master/autoload/sonokai.vim
