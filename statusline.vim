@@ -4,7 +4,6 @@
 " ================================================
 
 " Set colors and set statusbar on.
-
 set termguicolors
 set laststatus=2
 set noshowmode
